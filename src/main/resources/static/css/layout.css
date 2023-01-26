@@ -1,0 +1,207 @@
+html,
+body{
+    height: 100%;
+    padding :0;
+    margin: 0;
+}
+.header{
+    position: relative;
+    z-index: 500;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.footer{
+    bottom: 0px;
+    width:100%;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+  }
+#wrapper{
+    display: flex;
+    position: relative;
+    min-height: 100%;
+}
+#content{
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+.content{
+    margin-top :100px;
+}
+
+
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+.btn-8 {     <!--  장바구니 -->
+    background-color: #f0ecfc;
+    background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+.btn-8 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-8:before,
+.btn-8:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+}
+.btn-8:before{
+    height: 0%;
+    width: 2px;
+}
+.btn-8:after {
+    width: 0%;
+    height: 2px;
+}
+.btn-8:hover:before {
+    height: 100%;
+}
+.btn-8:hover:after {
+    width: 100%;
+}
+.btn-8:hover{
+    background: transparent;
+}
+.btn-8 span:hover{
+    color: #c797eb;
+}
+.btn-8 span:before,
+.btn-8 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+}
+.btn-8 span:before {
+    width: 2px;
+    height: 0%;
+}
+.btn-8 span:after {
+    height: 2px;
+    width: 0%;
+}
+.btn-8 span:hover:before {
+    height: 100%;
+}
+.btn-8 span:hover:after {
+    width: 100%;
+}
+.btn-10 {    <!-- 구매 -->
+    background: rgb(22,9,240);
+    background: linear-gradient(0deg, rgba(22,9,240,1) 0%, rgba(49,110,244,1) 100%);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.btn-10:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(.1);
+    transform: scale(.1);
+}
+.btn-10:hover {
+    color: #fff;
+    border: none;
+    background: transparent;
+}
+.btn-10:hover:after {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(2,0,0,1) 0%,  rgba(0,3,0,1)100%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.btn-13 {
+    background-color: #89d8d3;
+    background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+    border: none;
+    z-index: 1;
+}
+.btn-13:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    box-shadow:
+            -7px -7px 20px 0px #fff9,
+            -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #0002,
+            4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+.btn-13:hover {
+    color: #fff;
+}
+.btn-13:hover:after {
+    top: 0;
+    height: 100%;
+}
+.btn-13:active {
+    top: 2px;
+}
+.product-img img{
+    position: relative;
+    left: 150px;
+    top: 200px;
+    right: 0;
+    border-left: 1px solid #ddd;
+}
+.option_box{
+    position: absolute;
+    left: 500px;
+    top: 200px;
+    right: 0;
+    border-left: 1px solid #ddd;
+}

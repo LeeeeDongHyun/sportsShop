@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:height="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/layout.css}" rel="stylesheet">
+    <title>메뉴 구매? 상세?</title>
+</head>
+<body>
+<div class="product-img" layout:fragment="content">
+   <tr th:value="${item.getId()}">
+       <th><img th:src="${item.getImgUrl()}" width="300px" height="300px"/>
+   </tr>
+    <div class="option_box">
+        <strong>상품명:</strong><td th:text="${item.getItemNm()}"></td><br><br>
+        <strong>판매가</strong>
+        <td th:text="${item.getPrice()}"></td><br><br>
+        <div id="item_option_area" class="option_cont">
+            <select id="option" name="option" class="option">
+                <option value selected="selected">사이즈 선택</option>
+                <option value="95" data-txt="95">95</option>
+                <option value="100" data-txt="100">100</option>
+                <option value="105" data-txt="105">105</option>
+                <option value="110" data-txt="110">110</option>
+            </select><br><br>
+        </div>
+        <div class="sum-total-price">
+            <span class="price" th:text="${item.getPrice()}"></span>
+        </div><br><br>
+        <div class="btn_buy">
+            <button class="custom-btn btn-10">바로구매</button>
+            <button class="custom-btn btn-13">Like!</button>
+            <button class="custom-btn btn-8"><span>장바구니 추가</span></button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

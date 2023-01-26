@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<div class="header" th:fragment="header">
+    <header id="header">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+    <a class="navbar-brand" href="/">Shop</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item" >
+          <a class="nav-link" href="/admin/item/new">로그인</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" href="/admin/items">회원가입</a>
+        </li>
+          <!--   <li class="nav-item" sec:authorize="isAuthenticated()">
+               <a class="nav-link" href="/cart">장바구니</a>
+             </li>
+             <li class="nav-item" sec:authorize="isAuthenticated()">
+               <a class="nav-link" href="/orders">구매이력</a>
+             </li>    -->
+      <!--  <li class="nav-item" sec:authorize="isAnonymous()">
+          <a class="nav-link" href="/members/login">로그인</a>
+        </li>
+        <li class="nav-item" sec:authorize="isAuthenticated()">
+          <a class="nav-link" href="/members/logout">로그아웃</a>
+        </li> -->
+      </ul>
+      <form class="form-inline my-2 my-lg-0" th:action="@{/static}" method="get">
+        <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+    </header>
+</div>
+
+</html>
