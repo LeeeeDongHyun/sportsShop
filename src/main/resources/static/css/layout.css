@@ -126,37 +126,48 @@ body{
 .btn-8 span:hover:after {
     width: 100%;
 }
-.btn-10 {    <!-- 구매 -->
-    background: rgb(22,9,240);
-    background: linear-gradient(0deg, rgba(22,9,240,1) 0%, rgba(49,110,244,1) 100%);
-    color: #fff;
+
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
     border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
+    background: rgb(255,27,0);
+    background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
 }
-.btn-10:after {
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-    -webkit-transform: scale(.1);
-    transform: scale(.1);
-}
-.btn-10:hover {
-    color: #fff;
-    border: none;
+.btn-5:hover {
+    color: #f0094a;
     background: transparent;
+    box-shadow:none;
 }
-.btn-10:hover:after {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(2,0,0,1) 0%,  rgba(0,3,0,1)100%);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+.btn-5:before,
+.btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+            -1px -1px 5px 0px #fff,
+            7px 7px 20px 0px #0003,
+            4px 4px 5px 0px #0002;
+    transition:400ms ease all;
 }
+.btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+    width:100%;
+    transition:600ms ease all;
+}
+
 .btn-13 {
     background-color: #89d8d3;
     background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
@@ -191,12 +202,21 @@ body{
 .btn-13:active {
     top: 2px;
 }
+.product-img{
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
 .product-img img{
+    width: 300px;
+    height: 300px;
     position: relative;
     left: 150px;
-    top: 200px;
+    top: 150px;
     right: 0;
-    border-left: 1px solid #ddd;
+
 }
 .option_box{
     position: absolute;
@@ -204,4 +224,8 @@ body{
     top: 200px;
     right: 0;
     border-left: 1px solid #ddd;
+}
+.full-box{
+    width:50%;
+    height: auto;
 }

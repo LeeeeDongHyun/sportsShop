@@ -3,7 +3,7 @@ package project.sportsshop.service;
 import org.springframework.stereotype.Service;
 import project.sportsshop.dto.OrderDto;
 import project.sportsshop.entity.Item;
-import project.sportsshop.entity.Order;
+//import project.sportsshop.entity.Order;
 
 import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;

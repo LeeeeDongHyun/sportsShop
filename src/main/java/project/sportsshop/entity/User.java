@@ -1,18 +1,19 @@
 package project.sportsshop.entity;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import project.sportsshop.dto.UserFormDto;
 
 import javax.persistence.*;
 
 //import org.springframework.security.crypto.password.PasswordEncoder;
 
-
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 @Entity
-@Table(name="user_id")
-@Data
+@Table(name="user")
+@Getter
+@Setter
 public class User {
 
     @Id
@@ -23,9 +24,11 @@ public class User {
 
     private String name;
 
-    @Column(unique = true)
+    @Column
     private String email;
+    @Column
     private String password;
+    @Column
     private String address;
 
     public static User createUser(UserFormDto userFormDto /*, asswordEncoder passwordEncoder*/){

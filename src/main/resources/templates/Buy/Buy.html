@@ -4,69 +4,47 @@
       layout:decorate="~{layouts/layout}">
 <head>
     <meta charset="UTF-8">
-    <link th:href="@{/css/layout.css}" rel="stylesheet">
+    <link th:href="@{/css/Buy.css}" rel="stylesheet">
     <title>상품구매페이지</title>
 
 </head>
 <body>
 
-<!--<div id="body-wrapper">
-    <div id="body-content"> -->
+
 <div layout:fragment="content">
 <h2>상품 구매</h2>
-    <div class="buy-full-box">
-        <div class="buy-bg-color">
-            <div class="buy-full-wrp">
-    <div class=>
-    <h2 class="buy-header-text">(미정 사이트 이름)</h2>
-
-        <div class="card">
-            <div class="row">
-
-                    <div class="col-md-4 margin">
-
-
-
-                            <tr th:each="item : ${itemList}">
+    <section class="buy-full-box">
+        <div class="container">
+              <div class="title">
+    <h1>SERVICE LIST</h1>
+            <ul>
+                <li><a href="">Soccer</a></li>
+                <li><a href="">BasketBall</a></li>
+                <li><a href="">BaseBall</a></li>
+                <li><a href="">Badminton</a></li>
+                <li><a href="">Swim</a></li>
+                <li><a href="">Winter</a></li>
+            </ul>
+        </div>
+                    <div class="item_list" th:each="item : ${itemList}">
+                        <div class="item">
                                 <a th:href="${item.getId()}" >
-                                    <th><img th:src="${item.getImgUrl()}" width="150px" height="150px"이미지/></th><br>
 
+
+                                    <div class="img">
+                                        <img th:src="${item.getImgUrl()}" alt="">
+                                    </div>
+                                  <div class="text">
                                 <strong>상품명</strong>
-                                <td th:text="${item.getItemNm()}"></td><br>
+                                <span th:text="${item.getItemNm()}"></span><br><br>
                                     <strong>판매가</strong>
-                                    <td th:text="${item.getPrice()}"></td><br></a>
+                                    <span th:text="${item.getPrice()}+원"></span>
+                                </a><br>
 
-                            </tr>
-
+                                   </div>
                     </div>
-
-        </div>
-
-
-
-    </div>  <!--상단박스 끝 -->
-    <!--상품정보 시작-->
-    <div class="product-info-wrp">
-        <h3>선택 상품</h3>
-    <!--    <img th:src="${itemList.itemUrl}"  th:alt="${item.item_id}" height="400"><br>    -->
-
-    </div>
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    </div>
 </div>
+    </section>
 </div>
 </body>
 </html>
