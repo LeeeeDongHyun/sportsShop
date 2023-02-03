@@ -1,14 +1,19 @@
 package project.sportsshop.dto;
 
-import lombok.Data;
-import org.hibernate.validator.constraints.Length;
+
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 
-@Data
+
+@Getter
+@Setter
 public class UserFormDto {
+
+    @NotBlank(message = "아이디는 필수 입력 값입니다.")
+    private String id;
 
     @NotBlank(message = "이름은 필수 입력 값입니다.")
     private String name;
@@ -18,10 +23,19 @@ public class UserFormDto {
     private String email;
 
     @NotEmpty(message = "비밀번호는 필수 입력 값입니다.")
-    @Length(min=8, max=16, message = "비밀번호는 8자 이상, 16자 이하로 입력해주세요.")
     private String password;
+
+    @NotEmpty(message = "비밀번호 확인은 필수 항목입니다.")
+    private String password2;
+
+
 
     @NotEmpty(message = "주소는 필수 입력 값입니다.")
     private String address;
+
+
+    private String number;
+
+
 
 }

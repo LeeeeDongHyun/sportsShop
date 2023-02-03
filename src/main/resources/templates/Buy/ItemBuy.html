@@ -4,7 +4,7 @@
       layout:decorate="~{layouts/layout}">
 <head>
     <meta charset="UTF-8">
-    <link th:href="@{/css/layout.css}" rel="stylesheet">
+    <link th:href="@{/css/ItemBuy.css}" rel="stylesheet">
     <title>메뉴 구매? 상세?</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <strong>상품명:  </strong><td th:text="${item.getItemNm()}"></td><br><br>
         <strong>판매가:   </strong>
         <td th:text="${item.getPrice()}+원"></td><br><br>
-        <div id="item_option_area" class="option_cont"><strong>사이즈:   </strong>
+        <div id="item_option_area" class="option_cont"><strong>사이즈:  </strong>
             <select id="option" name="option" class="option">
                 <option value selected="selected">사이즈 선택</option>
                 <option value="95" data-txt="95">95</option>

@@ -12,8 +12,10 @@
 
 
 <div layout:fragment="content">
-<h2>상품 구매</h2>
+    <img class="background" th:src="@{/img/back.jpg}"/>
+<h3>가운데로 옮기고 뭐 쓸지 고민중</h3>
     <section class="buy-full-box">
+
         <div class="container">
               <div class="title">
     <h1>SERVICE LIST</h1>
@@ -26,25 +28,36 @@
                 <li><a href="">Winter</a></li>
             </ul>
         </div>
-                    <div class="item_list" th:each="item : ${itemList}">
+
+            <span class="item-list" th:each="item, index : ${itemList}">
                         <div class="item">
                                 <a th:href="${item.getId()}" >
 
 
-                                    <div class="img">
-                                        <img th:src="${item.getImgUrl()}" alt="">
+
+                                        <img class="img" th:src="${item.getImgUrl()}" alt="" loading="lazy">
+
+                                  <span class="text-name">
+
+                                <strong>상품명   </strong>
+                                      <span th:text="${item.getItemNm()}"></span><br><br>
+                                <strong>판매가      </strong>
+                                      <span th:text="${item.getPrice()}+원"></span>
+                                  </span></a>
+                                    <div class="text-price">
+
                                     </div>
-                                  <div class="text">
-                                <strong>상품명</strong>
-                                <span th:text="${item.getItemNm()}"></span><br><br>
-                                    <strong>판매가</strong>
-                                    <span th:text="${item.getPrice()}+원"></span>
-                                </a><br>
+                                <br>
+
 
                                    </div>
-                    </div>
-</div>
+
+                </span>
+        </div>
     </section>
 </div>
+
+
+
 </body>
 </html>

@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
@@ -33,7 +35,13 @@ dependencies {
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
     implementation 'org.springframework.boot:spring-boot-devtools'
 
-   // implementation 'org.springframework.boot:spring-boot-starter-security'
+
+//    implementation'org.mybatis.spring.boot:mybatis-spring-boot:2.2.2'
+//    implementation 'org.springframework.session:spring-session-core'
+//    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.4.5'
+
+
+    // implementation 'org.springframework.boot:spring-boot-starter-security'
    // implementation 'org.springframework.security:spring-security-taglibs'
 }
 

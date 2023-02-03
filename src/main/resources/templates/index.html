@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:height="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>시작화면</title>
 </head>
 <body>
-<a th:href="@{hi}">gdgd</a>      <!--구매버튼 눌러서 구매페이지 보내기-->
-<a th:href="@{Buy}">상품구매버튼인데 바꿔야됨</a> <!-- 임의로 만들어두고 나중에 구매버튼 만들면 이걸 바꾸면됨 buy{id}이런식-->
+<p>
+    <a th:href="@{hi}">gdgd</a>      <!--구매버튼 눌러서 구매페이지 보내기-->
+    <a th:href="@{Buy}">상품구매버튼인데 바꿔야됨</a> <!-- 임의로 만들어두고 나중에 구매버튼 만들면 이걸 바꾸면됨 buy{id}이런식-->
+    <a th:href="@{/User/Login}">로그인!</a>
+    <a th:href="@{/User/Join}">회원가입!!</a>
+</p>
+
+<th:block layout:fragment="script">
+    <script type="text/javascript">
+        console.log('HOME');
+    </script>
+</th:block>
 </body>
 </html>

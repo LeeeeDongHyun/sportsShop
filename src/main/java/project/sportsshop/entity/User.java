@@ -1,9 +1,13 @@
 package project.sportsshop.entity;
 
 import lombok.*;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.userdetails.UserDetails;
 import project.sportsshop.dto.UserFormDto;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 //import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -14,30 +18,46 @@ import javax.persistence.*;
 @Table(name="user")
 @Getter
 @Setter
+@Builder
 public class User {
 
     @Id
     @Column(name="user_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private String id;
+    @Column
+    private String password;
 
-
+    @Column
     private String name;
 
     @Column
     private String email;
+
     @Column
-    private String password;
+    private String number;
+
     @Column
     private String address;
 
-    public static User createUser(UserFormDto userFormDto /*, asswordEncoder passwordEncoder*/){
+
+
+    public User createUser(UserFormDto userFormDto){
         User user = new User();
+        user.setId(userFormDto.getId());
+        user.setPassword(password);
         user.setName(userFormDto.getName());
         user.setEmail(userFormDto.getEmail());
+        user.setNumber(userFormDto.getNumber());
         user.setAddress(userFormDto.getAddress());
-        //String password = passwordEncoder.encode(userFormDto.getPassword());
-        //user.setPassword(password);
+
         return user;
     }
+
+
+//    public User login(UserFormDto userFormDto){
+//        User user = new User();
+//        user.setId(userFormDto.getId());
+//        user.setPassword(password);
+//        return user;
+//    }
 }

@@ -20,6 +20,11 @@ public class ItemController {
     @Autowired
     private  ItemService itemService;
 
+    @GetMapping("/")
+    public String index(){
+
+        return "/index";
+    }
     @GetMapping("/Buy")
     public String Buy(Model model){
         //모든 item가져오기

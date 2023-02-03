@@ -20,6 +20,6 @@ public class ItemService {
     }
 
         public Item show(int id){
-        return itemRepository.findById(id).orElse(null);
+            return itemRepository.findById(id).orElse(null);
         }
 }
