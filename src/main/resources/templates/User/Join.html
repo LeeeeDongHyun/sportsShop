@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:height="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+<div class="container">
+    <th:block layout:fragment="content">
+    <form th:action="@{/User/Join}" th:object="${userFormDto}" method="post">
+
+            <h1>Join Page</h1>
+            <div class="form-group">
+                <div>
+                <label th:for="id" class="form-label">  ID : </label>
+                <input type="text" th:field="*{id}" placeholder="아이디!!!!"><br>
+                </div>
+
+                <label th:for="password">PW: </label>
+                <input type="password" th:field="*{password}" placeholder="xxxxxxxx">
+
+                <label th:for="password2">PW2: </label>
+                <input type="password2" th:field="*{password2}" placeholder="xxxxxxx"><br>
+
+                <lable th:for="email">이메일:</lable>
+                <input type="text" th:field="*{email}" placeholder="이메일"><br>
+
+                <label th:for="number">  전화번호 : </label>
+                <input type="text" th:field="*{number}" placeholder="전화번호!!!!"><br>
+
+                <label th:for="address">주소: </label>
+                <input type="text" th:field="*{address}" placeholder="주소">
+            </div>
+
+            <input class="btn-submit" type="submit" value="회원가입">
+
+    </form>
+    </th:block>
+</div>
+</body>
+</html>
